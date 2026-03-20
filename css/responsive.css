@@ -1,0 +1,390 @@
+/* ========== Responsive Design ========== */
+
+/* Large tablets and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .campaigns-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-content p {
+        margin: 0 auto;
+    }
+    
+    .about-grid {
+        gap: 40px;
+    }
+}
+
+/* Tablets and below (max-width: 992px) */
+@media (max-width: 992px) {
+    .slide-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .donation-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .donation-sidebar {
+        order: -1;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 350px;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition);
+        overflow-y: auto;
+        z-index: 1001;
+        align-items: flex-start;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu a {
+        font-size: 1.05rem;
+        padding: 12px 0;
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-right .btn-primary {
+        display: none;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-experience-badge {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .testimonial-card {
+        min-width: calc(50% - 15px);
+    }
+    
+    .timings-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .top-bar {
+        display: none;
+    }
+    
+    .page-header {
+        padding: 100px 20px 40px;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-slider {
+        height: 65vh;
+        min-height: 450px;
+    }
+    
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+    
+    .slide-content p {
+        font-size: 1rem;
+    }
+    
+    .slide-tag {
+        font-size: 0.8rem;
+        padding: 6px 16px;
+    }
+    
+    .slide-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .slide-buttons .btn {
+        width: 80%;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .slider-prev { left: 15px; }
+    .slider-next { right: 15px; }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .campaigns-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .stat-icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .cta-section {
+        padding: 50px 0;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .timings-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        min-width: 100%;
+    }
+    
+    .about-img-main img {
+        height: 300px;
+        object-position: center top;
+    }
+    
+    .preset-amounts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .thank-you-actions {
+        flex-direction: column;
+    }
+    
+    .thank-you-actions .btn {
+        width: 100%;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-slider {
+        height: 55vh;
+        min-height: 400px;
+    }
+    
+    .slide-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .slide-content p {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .stat-card {
+        padding: 20px 10px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .stat-icon-circle i {
+        font-size: 1.5rem;
+    }
+    
+    .donation-form {
+        padding: 20px;
+    }
+    
+    .sidebar-card {
+        padding: 20px;
+    }
+    
+    .preset-amounts {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+    
+    .modal-header,
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .scroll-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .about-experience-badge {
+        padding: 18px;
+    }
+    
+    .exp-number {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+    
+    .about-img-main img {
+        height: 250px;
+        object-position: center top;
+    }
+    
+    .campaign-image {
+        height: 180px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .top-bar,
+    .hero-slider,
+    .scroll-top,
+    .footer,
+    .btn,
+    .slider-btn,
+    .slider-dots {
+        display: none !important;
+    }
+    
+    body {
+        color: #000;
+    }
+    
+    .page-header {
+        background: none;
+        color: #000;
+    }
+}
+
+/* High resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-slider {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .slide {
+        transition: none;
+    }
+}

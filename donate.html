@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Make a secure online donation to our Shri Shyam Mandir. Support temple activities, annadanam, and charitable services.">
+    <meta name="keywords" content="temple donation, online donation, donate to temple, 80G donation, tax benefit donation">
+    <meta property="og:title" content="Donate to Shri Shyam Mandir">
+    <meta property="og:description" content="Support our temple through secure online donations.">
+    <title>Donate - Shri Shyam Mandir</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/donate.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-om"></i>
+                    <span>श्री श्याम मंदिर</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/donate" class="active">Donate</a></li>
+                    <li><a href="/events">Events & Poojas</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                
+                <div class="nav-right">
+                    <a href="/donate" class="btn btn-primary">Donate Now</a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-hand-holding-heart"></i> Make a Donation</h1>
+            <p>Your contribution helps us serve the divine and the community</p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation-section section-padding">
+        <div class="container">
+            <div class="donation-wrapper">
+                <!-- Donation Form -->
+                <div class="donation-form-container">
+                    <div class="form-header">
+                        <h2>Donation Details</h2>
+                        <p>All donations are eligible for 80G tax exemption</p>
+                    </div>
+
+                    <form id="donationForm" class="donation-form">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Personal Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pan">PAN Number <span class="optional">(For 80G Receipt)</span></label>
+                                    <input type="text" id="pan" name="pan" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" 
+                                           placeholder="ABCDE1234F" maxlength="10" style="text-transform: uppercase;">
+                                    <small>Required for tax exemption certificate</small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="address">Address <span class="optional">(Optional)</span></label>
+                                    <input type="text" id="address" name="address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Donation Details -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-donate"></i> Donation Details</h3>
+                            
+                            <div class="form-group">
+                                <label for="category">Donation Category <span class="required">*</span></label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="General Donation">General Donation</option>
+                                    <option value="Annadanam">Annadanam (Food Offering)</option>
+                                    <option value="Temple Construction">Temple Construction/Renovation</option>
+                                    <option value="Festival Sponsorship">Festival Sponsorship</option>
+                                    <option value="Gaushala">Gaushala (Cow Shelter)</option>
+                                    <option value="Education Fund">Education Fund</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Donation Amount <span class="required">*</span></label>
+                                <div class="amount-selection">
+                                    <div class="preset-amounts">
+                                        <button type="button" class="amount-btn" data-amount="101">₹101</button>
+                                        <button type="button" class="amount-btn" data-amount="251">₹251</button>
+                                        <button type="button" class="amount-btn" data-amount="501">₹501</button>
+                                        <button type="button" class="amount-btn" data-amount="1001">₹1001</button>
+                                        <button type="button" class="amount-btn" data-amount="5001">₹5001</button>
+                                        <button type="button" class="amount-btn" data-amount="11000">₹11,000</button>
+                                    </div>
+                                    <div class="custom-amount">
+                                        <input type="number" id="amount" name="amount" placeholder="Enter custom amount" 
+                                               min="1" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dedication">Dedication/Message <span class="optional">(Optional)</span></label>
+                                <textarea id="dedication" name="dedication" rows="3" 
+                                          placeholder="In memory of... / Special wishes..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method Selection -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+                            
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="razorpay" checked>
+                                    <div class="payment-card">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <div class="payment-content">
+                                            <h4>Razorpay</h4>
+                                            <p>Cards, UPI, Net Banking, Wallets</p>
+                                        </div>
+                                        <div class="payment-check">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="upi">
+                                    <div class="payment-card">
+                                        <div class="payment-icon">
+                                            <i class="fas fa-qrcode"></i>
+                                        </div>
+                                        <div class="payment-content">
+                                            <h4>UPI Direct</h4>
+                                            <p>Scan QR or use UPI ID</p>
+                                        </div>
+                                        <div class="payment-check">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
+                            <i class="fas fa-heart"></i> Proceed to Payment
+                        </button>
+
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i> Your donation is secure and encrypted. 
+                            You will receive a tax-exemption receipt via email.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Donation Sidebar -->
+                <div class="donation-sidebar">
+                    <!-- Donation Summary -->
+                    <div class="sidebar-card">
+                        <h3>Donation Summary</h3>
+                        <div class="summary-item">
+                            <span>Category:</span>
+                            <strong id="summaryCategory">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Amount:</span>
+                            <strong id="summaryAmount">₹0</strong>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total:</span>
+                            <strong id="summaryTotal">₹0</strong>
+                        </div>
+                    </div>
+
+                    <!-- Trust Details -->
+                    <div class="sidebar-card">
+                        <h3>Trust Information</h3>
+                        <ul class="trust-info">
+                            <li>
+                                <i class="fas fa-certificate"></i>
+                                <div>
+                                    <strong>80G Registered</strong>
+                                    <span>Tax exemption available</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <strong>Secure Payment</strong>
+                                    <span>SSL encrypted</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-file-invoice"></i>
+                                <div>
+                                    <strong>Instant Receipt</strong>
+                                    <span>Via email</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Help Section -->
+                    <div class="sidebar-card">
+                        <h3>Need Help?</h3>
+                        <p>If you face any issues with donation, please contact us:</p>
+                        <div class="help-contact">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-9876543210</span>
+                        </div>
+                        <div class="help-contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>shrishyammandir@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPI Modal -->
+    <div class="modal" id="upiModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2><i class="fas fa-qrcode"></i> Pay via UPI</h2>
+                <p>Scan QR code or use UPI ID to complete payment</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="upi-section">
+                    <h3>Scan QR Code</h3>
+                    <div class="qr-code-container">
+                        <canvas id="qrCode"></canvas>
+                    </div>
+                    <p class="upi-amount">Amount: <strong id="upiAmount">₹0</strong></p>
+                </div>
+
+                <div class="divider">OR</div>
+
+                <div class="upi-section">
+                    <h3>Use UPI ID</h3>
+                    <div class="upi-id-container">
+                        <input type="text" id="upiIdDisplay" readonly value="shrishyammandir@ybl">
+                        <button class="btn btn-secondary" id="copyUpiBtn">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+
+                <div class="upi-apps">
+                    <h3>Quick Pay with Apps</h3>
+                    <div class="upi-app-buttons">
+                        <button class="upi-app-btn" id="gpayBtn">
+                            <i class="fab fa-google-pay"></i> Google Pay
+                        </button>
+                        <button class="upi-app-btn" id="phonepeBtn">
+                            <i class="fas fa-mobile-alt"></i> PhonePe
+                        </button>
+                        <button class="upi-app-btn" id="paytmBtn">
+                            <i class="fas fa-wallet"></i> Paytm
+                        </button>
+                    </div>
+                </div>
+
+                <div class="upi-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>After successful payment, please send a screenshot of the transaction to 
+                       <strong>+91-9876543210</strong> for verification and receipt generation.</p>
+                </div>
+
+                <button class="btn btn-primary btn-block" id="upiDoneBtn">
+                    I have completed the payment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal" id="thankYouModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header success">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Thank You for Your Donation!</h2>
+            </div>
+
+            <div class="modal-body">
+                <div class="thank-you-content">
+                    <p>Your generous contribution has been received successfully.</p>
+                    
+                    <div class="transaction-details">
+                        <h3>Transaction Details</h3>
+                        <div class="detail-row">
+                            <span>Receipt No:</span>
+                            <strong id="receiptNumber">-</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Amount:</span>
+                            <strong id="txAmount">₹0</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Date:</span>
+                            <strong id="txDate">-</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Payment ID:</span>
+                            <strong id="paymentId">-</strong>
+                        </div>
+                    </div>
+
+                    <div class="receipt-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>A donation receipt has been sent to your email address. 
+                           You can use this for 80G tax exemption.</p>
+                    </div>
+
+                    <div class="thank-you-actions">
+                        <button class="btn btn-primary" id="downloadReceiptBtn">
+                            <i class="fas fa-download"></i> Download Receipt
+                        </button>
+                        <a href="/" class="btn btn-outline">
+                            <i class="fas fa-home"></i> Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-om"></i>
+                        <span>श्री श्याम मंदिर</span>
+                    </div>
+                    <p class="footer-desc">
+                        Dedicated to preserving ancient traditions and serving the community 
+                        through spiritual and charitable activities.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/donate">Donate</a></li>
+                        <li><a href="/events">Events</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91-9876543210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>shrishyammandir@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 श्री श्याम मंदिर. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    
+    <!-- Razorpay -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/donate.js"></script>
+</body>
+</html>
